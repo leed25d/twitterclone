@@ -2,7 +2,9 @@
 <% if logged_in? %>
   Welcome <%= current_user.username %>! Not you?
   <%= link_to "Log out", logout_path %><br /><br />
-  <b><%= render :partial => "tweets/message_form" %></b>
+  <b><%= render :partial => "tweets/message_form" %></b><br /><br />
+
+  <%= render :partial => "tweets/tweet", :collection => @tweets %>  
 
 <% else %>
   <%= link_to "Sign up", signup_path %> or
