@@ -27,7 +27,7 @@ a {
   margin-top: 20px;
 }
 
-#flash_notice, #flash_error {
+#flash_notice, #flash_error, #flash_message {
   padding: 5px 8px;
   margin: 10px 0;
 }
@@ -39,6 +39,11 @@ a {
 
 #flash_error {
   background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+#flash_message {
+  background-color: #CCF;
   border: solid 1px #C66;
 }
 

@@ -10,7 +10,7 @@ class TweetsController < ApplicationController
       if @tweet.save
         format.html { redirect_to root_path }
       else
-        flash[:notice] = @tweet.errors.full_messages.join("</br/>")
+        flash[:error] = @tweet.errors.full_messages.join("</br/>")
         format.html { redirect_to root_path }
       end
     end
