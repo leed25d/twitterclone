@@ -1,0 +1,7 @@
+<h2>New Follows</h2>
+<% @users.each do |user| %>
+  <% if user.username != current_user.username %> 
+    <%=h user.username %> 
+    <%= link_to "Follow Me", follows_path(:other_id => user), :method => :post %> <br/>
+  <% end %>
+<% end %>

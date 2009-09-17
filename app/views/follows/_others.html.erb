@@ -1,0 +1,9 @@
+<p>Username: <%=h @user.username %></p>
+ 
+<h2>Others</h2>
+<ul>
+  <% @user.follows.each do |follow| %>
+    <li>
+      <%=h follow.other.username %> - <%= link_to "remove", follow, :method => :delete %></li>
+  <% end %>
+</ul>
