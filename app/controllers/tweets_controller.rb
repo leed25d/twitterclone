@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+
   def create
     if !session[:user_id]
       flash[:notice] = "You must be logged in to tweet"
@@ -11,7 +12,7 @@ class TweetsController < ApplicationController
         format.html { redirect_to root_path }
       else
         flash[:error] = @tweet.errors.full_messages.join("</br/>")
-        format.html { redirect_to root_path }
+        format.html { render :template => 'landing/index'  }
       end
     end
   end
